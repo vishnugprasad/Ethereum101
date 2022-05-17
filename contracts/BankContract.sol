@@ -24,7 +24,7 @@ contract Bank {
         bankName = _name;
     }
 
-    function withDrawMoney(address payable _to, uint256 _total) public payable {
+    function withdrawMoney(address payable _to, uint256 _total) public {
         require(
             _total <= customerBalance[msg.sender],
             "You have insuffient funds to withdraw"
